@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+    --verde: #42b446;
+    --verde-oscuro: #2e7d32;
+    --beige: #f4f1ee;
+    --blanco: #ffffff;
+    --gris: #333;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /*--- Inicio del nav ---*/
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 0 2rem;
+    flex-wrap: nowrap;
+  }
+  
+  .logo img {
+    height: 180px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.07);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--gris);
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--verde);
+    transform: translateY(-2px);
+  }
+  
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--verde);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .auth-buttons .login,
+  .auth-buttons .idiomas {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-right: 30px;
+    display: inline-block;
+  }
+  
+  .auth-buttons .login {
+    color: var(--blanco);
+    background-color: #006f049c;
+  }
+  
+  .auth-buttons .login:hover {
+    background-color: var(--verde-oscuro);
+    transform: translateY(-2px);
+  }
+  
+  .auth-buttons .idiomas {
+    color: var(--blanco);
+    background-color: #333;
+  }
+  
+  .auth-buttons .idiomas:hover {
+    background-color: #072a5e9c;
+    transform: translateY(-2px);
+  }
+  
+  .topnav {
+    display: none;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .topnav #myLinks a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .topnav .icon {
+    color: #333 !important;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  /*--Inicio del hero--*/
+  .hero {
+    margin-top: 8em;
+    margin-bottom: 8em;
+  }
+  /*--Inicio las tarjetas--*/
+ .card{
+    width: 25rem;
+ }
+ .card-header{
+    height: 8rem;
+ }
+ .col{
+  height: 20rem;  
+ }
+  .row-cols-lg-4{
+    width: 90%;
+ }
+  /*--Inicio del footer--*/
+  footer {
+    background: #1B3022;
+    color: #B0B0B0;
+    text-align: center;
+    padding: 2rem 1rem;
+    line-height: 17.5px;
+  }
+  
+  #footersup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 1rem;
+  }
+  
+  #footersup li {
+    list-style: none;
+  }
+  
+  #socialLinks img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: filter 0.3s;
+  }
+  
+  #faq a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+  /*--- Responsive ---*/
+@media (max-width: 1000px) {
+
+  .nav-links         { display: none; }
+  .auth-buttons      { display: none; }
+  .topnav            { display: block; }
+  .fa .fa-bars { display: block; }
+  .introduccion {
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+  }
+
+
+  #footersup {
+    gap: 18px;  
+    flex-direction: column;
+  }
+
+  #servicios{
+    flex-wrap: wrap;
+  }
+   .card{
+    width: 19.5rem;
+ }
+   .row-cols-lg-4{
+    width: 100%;
+ }
+}
