@@ -15,6 +15,13 @@
     --blanco: #ffffff;
     --gris: #333;
   }
+  .knewave-regular {
+    font-family: "Knewave", system-ui;
+    font-weight: 700;
+    font-size: 2rem;
+    font-style: normal;
+  }
+  
   
   body {
     font-family: 'Montserrat', sans-serif;
@@ -193,6 +200,7 @@
     color: white;
     text-decoration: none;
   }
+
 
 /*Referencia a: https://animate.style/*/
 /*Animaciones usadas: fadeInDown y fadeInUp*/
