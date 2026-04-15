@@ -158,6 +158,9 @@
   .row-cols-lg-4{
     width: 90%;
  }
+ .text-justify{
+  text-align: justify;
+ }
   /*--Inicio del footer--*/
   footer {
     background: #1B3022;
